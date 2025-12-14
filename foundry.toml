@@ -1,0 +1,28 @@
+[profile.default]
+src = "src"
+test = "test"
+libs = ["lib"]
+solc_version = "0.8.25"
+
+# Optimizer settings
+optimizer = true
+optimizer_runs = 200
+
+# Gas reporting enabled
+gas_reports = ["*"]
+
+# Verbose output for debugging
+verbosity = 3
+
+# RPC Configuration for forking
+[rpc_endpoints]
+mainnet = "${RPC_URL}"
+
+# Fork testing notes:
+# Tests read RPC_URL and FORK_BLOCK from .env in root directory
+# Block 24007035 is pinned for reproducibility (latest Ethereum mainnet)
+
+
+# Fork testing notes:
+# Tests read RPC_URL and BLOCK_NUMBER from .env
+# Block 24007035 is pinned for reproducibility (latest Ethereum mainnet)
